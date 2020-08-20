@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,7 +26,7 @@ public class FxmlGuiDriver extends Application {
         final Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
 
         log.debug("Showing JFX scene");
-        final Scene scene = new Scene(rootNode, 640, 360);
+        final Scene scene = new Scene(rootNode);
         //scene.getStylesheets().add("/styles/styles.css");
 
         stage.setTitle("Morse Translator");
