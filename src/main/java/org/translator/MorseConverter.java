@@ -50,7 +50,7 @@ public class MorseConverter {
             case '9' -> "----.";
             case ' ' -> "/";
 
-            default -> throw new IllegalStateException("Unexpected value: " + x);
+            default -> "?";
         };
     }
 
@@ -100,7 +100,8 @@ public class MorseConverter {
             case "---.." -> "8";
             case "----." -> "9";
             case "/" -> " ";
-            default -> throw new IllegalStateException("Unexpected value: " + morse);
+
+            default -> "?";
         };
 
     }
