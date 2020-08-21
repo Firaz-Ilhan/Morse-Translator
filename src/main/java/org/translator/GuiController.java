@@ -18,7 +18,7 @@ public class GuiController {
     @FXML
     public void morseToWords(ActionEvent actionEvent) {
 
-        String input = morseInput.getText();
+        String input = morseInput.getText().trim();
         String output = MorseConverter.translateToWord(input);
         wordsOutput.setText(output);
     }
@@ -32,7 +32,7 @@ public class GuiController {
     @FXML
     public void wordsToMorse(ActionEvent actionEvent) {
 
-        String input = wordsInput.getText();
+        String input = wordsInput.getText().trim();
         String output = MorseConverter.translateToMorse(input);
         morseOutput.setText(output);
     }
