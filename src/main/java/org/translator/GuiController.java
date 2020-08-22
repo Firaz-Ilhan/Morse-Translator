@@ -1,5 +1,6 @@
 package org.translator;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import org.apache.logging.log4j.LogManager;
@@ -15,9 +16,9 @@ public class GuiController {
     private TextArea wordsOutput;
 
     @FXML
-    public void morseToWords() {
+    public void morseToWords(ActionEvent actionEvent) {
 
-        String input = morseInput.getText();
+        String input = morseInput.getText().trim();
         String output = MorseConverter.translateToWord(input);
         wordsOutput.setText(output);
     }
@@ -29,9 +30,9 @@ public class GuiController {
     private TextArea morseOutput;
 
     @FXML
-    public void wordsToMorse() {
+    public void wordsToMorse(ActionEvent actionEvent) {
 
-        String input = wordsInput.getText();
+        String input = wordsInput.getText().trim();
         String output = MorseConverter.translateToMorse(input);
         morseOutput.setText(output);
     }
