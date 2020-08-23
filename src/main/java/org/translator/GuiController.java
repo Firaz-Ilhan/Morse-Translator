@@ -27,9 +27,9 @@ public class GuiController implements Initializable {
 
     //Tab: Morse To Words
     @FXML
-    TextArea morseInput;
+    private TextArea morseInput;
     @FXML
-    TextArea wordsOutput;
+    private TextArea wordsOutput;
 
     @FXML
     public void morseToWords() {
