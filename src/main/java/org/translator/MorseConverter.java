@@ -15,10 +15,13 @@ public class MorseConverter {
             case 'a' -> ".-";
             case 'ä' -> ".-.-";
             case 'á' -> ".--.-";
+            case '@' -> ".--.-.";
             case 'b' -> "-...";
             case 'c' -> "-.-.";
             case 'd' -> "-..";
             case 'e' -> ".";
+            case 'é' -> "..-..";
+            case 'è' -> ".-..-";
             case 'f' -> "..-.";
             case 'g' -> "--.";
             case 'h' -> "....";
@@ -53,9 +56,11 @@ public class MorseConverter {
             case '7' -> "--...";
             case '8' -> "---..";
             case '9' -> "----.";
+            case '?' -> "..--..";
+            case '!' -> "-.-.--";
             case ' ' -> "/";
 
-            default -> "?";
+            default -> "#";
         };
     }
 
@@ -71,10 +76,13 @@ public class MorseConverter {
             case ".-" -> "a";
             case ".-.-" -> "ä";
             case ".--.-" -> "á";
+            case ".--.-." -> "@";
             case "-..." -> "b";
             case "-.-." -> "c";
             case "-.." -> "d";
             case "." -> "e";
+            case "..-.." -> "é";
+            case ".-..-" -> "è";
             case "..-." -> "f";
             case "--." -> "g";
             case "...." -> "h";
@@ -109,9 +117,12 @@ public class MorseConverter {
             case "--..." -> "7";
             case "---.." -> "8";
             case "----." -> "9";
+            case "..--.." -> "?";
+            case "-.-.--" -> "!";
             case "/" -> " ";
+            case "" -> "";
 
-            default -> "?";
+            default -> "#";
         };
 
     }
