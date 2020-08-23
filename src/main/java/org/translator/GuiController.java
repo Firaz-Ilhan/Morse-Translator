@@ -31,7 +31,6 @@ public class GuiController implements Initializable {
     @FXML
     private TextArea wordsOutput;
 
-    @FXML
     public void morseToWords() {
 
         String input = morseInput.getText().trim();
@@ -45,7 +44,6 @@ public class GuiController implements Initializable {
     @FXML
     private TextArea morseOutput;
 
-    @FXML
     public void wordsToMorse() {
 
         String input = wordsInput.getText().trim();
