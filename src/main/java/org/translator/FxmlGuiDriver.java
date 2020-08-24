@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,6 +30,7 @@ public class FxmlGuiDriver extends Application {
         final Scene scene = new Scene(rootNode);
         //scene.getStylesheets().add("/styles/styles.css");
 
+        stage.getIcons().add(new Image(FxmlGuiDriver.class.getResourceAsStream("/images/icon.png")));
         stage.setTitle("Morse Translator");
         stage.setScene(scene);
         stage.show();

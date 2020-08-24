@@ -13,10 +13,15 @@ public class MorseConverter {
         x = Character.toLowerCase(x);
         return switch (x) {
             case 'a' -> ".-";
+            case 'ä' -> ".-.-";
+            case 'á' -> ".--.-";
+            case '@' -> ".--.-.";
             case 'b' -> "-...";
             case 'c' -> "-.-.";
             case 'd' -> "-..";
             case 'e' -> ".";
+            case 'é' -> "..-..";
+            case 'è' -> ".-..-";
             case 'f' -> "..-.";
             case 'g' -> "--.";
             case 'h' -> "....";
@@ -27,12 +32,15 @@ public class MorseConverter {
             case 'm' -> "--";
             case 'n' -> "-.";
             case 'o' -> "---";
+            case 'ö' -> "---.";
             case 'p' -> ".--.";
             case 'q' -> "--.-";
             case 'r' -> ".-.";
             case 's' -> "...";
+            case 'ß' -> "...--..";
             case 't' -> "-";
             case 'u' -> "..-";
+            case 'ü' -> "..--";
             case 'v' -> "...-";
             case 'w' -> ".--";
             case 'x' -> "-..-";
@@ -48,9 +56,11 @@ public class MorseConverter {
             case '7' -> "--...";
             case '8' -> "---..";
             case '9' -> "----.";
+            case '?' -> "..--..";
+            case '!' -> "-.-.--";
             case ' ' -> "/";
 
-            default -> "?";
+            default -> "#";
         };
     }
 
@@ -64,10 +74,15 @@ public class MorseConverter {
 
         return switch (morse) {
             case ".-" -> "a";
+            case ".-.-" -> "ä";
+            case ".--.-" -> "á";
+            case ".--.-." -> "@";
             case "-..." -> "b";
             case "-.-." -> "c";
             case "-.." -> "d";
             case "." -> "e";
+            case "..-.." -> "é";
+            case ".-..-" -> "è";
             case "..-." -> "f";
             case "--." -> "g";
             case "...." -> "h";
@@ -78,12 +93,15 @@ public class MorseConverter {
             case "--" -> "m";
             case "-." -> "n";
             case "---" -> "o";
+            case "---." -> "ö";
             case ".--." -> "p";
             case "--.-" -> "q";
             case ".-." -> "r";
+            case "...--.." -> "ß";
             case "..." -> "s";
             case "-" -> "t";
             case "..-" -> "u";
+            case "..--" -> "ü";
             case "...-" -> "v";
             case ".--" -> "w";
             case "-..-" -> "x";
@@ -99,9 +117,12 @@ public class MorseConverter {
             case "--..." -> "7";
             case "---.." -> "8";
             case "----." -> "9";
+            case "..--.." -> "?";
+            case "-.-.--" -> "!";
             case "/" -> " ";
+            case "" -> "";
 
-            default -> "?";
+            default -> "#";
         };
 
     }

@@ -1,13 +1,29 @@
 package org.translator;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class GuiController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class GuiController implements Initializable {
     private final static Logger log = LogManager.getLogger(GuiController.class);
+
+    //Automatic translation
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        morseInput.textProperty().addListener((observable, oldValue, newValue) -> {
+            morseToWords();
+        });
+
+        wordsInput.textProperty().addListener((observable, oldValue, newValue) -> {
+            wordsToMorse();
+        });
+    }
 
     //Tab: Morse To Words
     @FXML
@@ -15,8 +31,7 @@ public class GuiController {
     @FXML
     private TextArea wordsOutput;
 
-    @FXML
-    public void morseToWords(ActionEvent actionEvent) {
+    public void morseToWords() {
 
         String input = morseInput.getText().trim();
         String output = MorseConverter.translateToWord(input);
@@ -29,10 +44,9 @@ public class GuiController {
     @FXML
     private TextArea morseOutput;
 
-    @FXML
-    public void wordsToMorse(ActionEvent actionEvent) {
+    public void wordsToMorse() {
 
-        String input = wordsInput.getText().trim();
+        String input = wordsInput.getText();
         String output = MorseConverter.translateToMorse(input);
         morseOutput.setText(output);
     }
