@@ -46,7 +46,7 @@ public class GuiController implements Initializable {
 
     public void wordsToMorse() {
 
-        String input = wordsInput.getText().trim();
+        String input = wordsInput.getText();
         String output = MorseConverter.translateToMorse(input);
         morseOutput.setText(output);
     }

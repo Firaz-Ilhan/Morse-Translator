@@ -30,7 +30,7 @@ public class FxmlGuiDriver extends Application {
         final Scene scene = new Scene(rootNode);
         //scene.getStylesheets().add("/styles/styles.css");
 
-        stage.getIcons().add(new Image("./images/icon.png"));
+        stage.getIcons().add(new Image(FxmlGuiDriver.class.getResourceAsStream("/images/icon.png")));
         stage.setTitle("Morse Translator");
         stage.setScene(scene);
         stage.show();
