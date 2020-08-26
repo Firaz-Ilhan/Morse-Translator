@@ -59,6 +59,8 @@ public class MorseConverter {
             case '?' -> "..--..";
             case '!' -> "-.-.--";
             case ' ' -> "/";
+            case '\u0009' -> "[Tab]";
+            case '\n' -> "¶";
 
             default -> "#";
         };
