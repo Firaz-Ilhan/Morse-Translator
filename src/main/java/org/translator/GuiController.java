@@ -9,8 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ResourceBundle;
 
 public class GuiController implements Initializable {
@@ -27,9 +25,7 @@ public class GuiController implements Initializable {
             wordsToMorse();
         });
 
-        if (Files.isReadable(Path.of("src", "main", "resources", "images", "icon.png"))) {
-            aboutIcon.setImage(new Image(GuiController.class.getResourceAsStream("/images/icon.png")));
-        }
+        aboutIcon.setImage(new Image("/images/icon.png"));
 
         String osName = System.getProperty("os.name");
         String osArch = System.getProperty("os.arch");
