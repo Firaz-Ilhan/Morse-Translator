@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0"
@@ -101,14 +102,25 @@
                 </GridPane>
             </content>
         </Tab>
-        <Tab text="Shortcuts">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-            </content>
-        </Tab>
         <Tab text="About">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TextArea fx:id="versionArea" editable="false" layoutX="96.0" layoutY="220.0" prefHeight="197.0"
+                                  prefWidth="480.0" wrapText="true" AnchorPane.bottomAnchor="57.0"
+                                  AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="95.0"
+                                  AnchorPane.topAnchor="220.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </TextArea>
+                        <ImageView fx:id="aboutIcon" fitHeight="134.0" fitWidth="179.0" layoutX="246.0" layoutY="22.0"
+                                   pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="318.0"
+                                   AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="246.0"
+                                   AnchorPane.topAnchor="22.0">
+                        </ImageView>
+                    </children>
+                </AnchorPane>
             </content>
         </Tab>
     </tabs>

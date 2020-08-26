@@ -9,6 +9,9 @@ import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 public class FxmlGuiDriver extends Application {
 
     private static final Logger log = LogManager.getLogger(FxmlGuiDriver.class);
@@ -30,7 +33,10 @@ public class FxmlGuiDriver extends Application {
         final Scene scene = new Scene(rootNode);
         //scene.getStylesheets().add("/styles/styles.css");
 
-        stage.getIcons().add(new Image(FxmlGuiDriver.class.getResourceAsStream("/images/icon.png")));
+        if (Files.isReadable(Path.of("src", "main", "resources", "images", "icon.png"))) {
+            stage.getIcons().add(new Image(FxmlGuiDriver.class.getResourceAsStream("/images/icon.png")));
+        }
+
         stage.setTitle("Morse Translator");
         stage.setScene(scene);
         stage.show();
