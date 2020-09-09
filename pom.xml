@@ -4,13 +4,13 @@
 
     <groupId>org.translator</groupId>
     <artifactId>morse-translator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
-        <javafx.base.version>14.0.2.1</javafx.base.version>
+        <javafx.base.version>15</javafx.base.version>
     </properties>
 
     <name>morse-translator</name>
