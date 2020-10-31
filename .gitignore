@@ -12,6 +12,7 @@ dependency-reduced-pom.xml
 
 # User-specific stuff:
 .idea/
+morse-translator.iml
 
 # CMake
 cmake-build-debug/

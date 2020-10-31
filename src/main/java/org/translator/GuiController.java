@@ -34,7 +34,7 @@ public class GuiController implements Initializable {
         versionArea.setText("Operating System: " + osName + ' ' + osArch + '\n'
                 + "Java runtime version: " + javaVersion + '\n'
                 + "JavaFX version: " + javafxVersion + '\n' + '\n'
-                + "Morse Translator version: 1.0.2" + '\n'
+                + "Morse Translator version: 1.0.3" + '\n'
                 + "https://github.com/Firaz-Ilhan/Morse-Translator");
     }
 
